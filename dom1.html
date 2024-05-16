@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Captcha</title>
+<style>
+    #captcha{
+        background-image: linear-gradient(#FFFFFF, rgb(255, 122, 89));
+        width: 60px;
+        margin-bottom: 10px;
+        
+
+    }
+</style>
 </head>
 <body>
 
@@ -16,7 +25,7 @@ function generateCaptcha(length) {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let captcha = '';
     for (let i = 0; i < length; i++) {
-        captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+        captcha = captcha + characters.charAt(Math.floor(Math.random() *characters.length));
     }
     return captcha;
 }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        #input{
+            border: 1px solid black;
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form id="form">
+        <label for="username">UserName</label>
+        <input type="text" id="usernameInput"/><br><br>
+        
+        <label for="password">Password</label>
+        <input type="password" id="passwordInput"/><br><br>
+        
+        <button type="button" id="btn">Login</button><br><br>
+    </form>
+
+    <div id="input">
+        <h3>UserName = <span id="displayUsername"></span></h3>
+        <h3>Password = <span id="displayPassword"></span></h3>
+    </div>
+
+    <script>
+    let button = document.getElementById("btn");
+    button.addEventListener("click", function() {
+        let usernameInput = document.getElementById("usernameInput");
+        let username = usernameInput.value;
+        let passwordInput = document.getElementById("passwordInput");
+        let password = passwordInput.value;
+        document.getElementById("displayUsername").textContent = username;
+        document.getElementById("displayPassword").textContent = password;
+        });
+    </script>
+</body>
+</html>
